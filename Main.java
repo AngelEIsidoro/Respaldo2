@@ -80,7 +80,7 @@ public class Main {
                   break;
               case 7:
               //Método que nos servira para saber cual es el elemento minimo o menor de la pila.
-                  //p.minimo();
+                  p.minimo();
                   break;
               case 8:
               //Esta opción es la terminación de la ejecución

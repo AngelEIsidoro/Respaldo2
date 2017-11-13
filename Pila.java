@@ -47,7 +47,7 @@ public class Pila
     public void cima() {//Buscar
         if(!vacia() )
             System.out.println("Cima: " + top.getValor());
-            else
+        else
             System.out.println("La pila esta vacia");
     }
     //Método pop tipo void nos servira para sacar un valor de la pila, pero primero
@@ -88,7 +88,7 @@ public class Pila
             System.out.println("PILA VACÍA.");
         }
     }
-    
+
     //Creamos un metodo que determine el numero de elementos que hay en la pila
     public void tamaño(){
         //verificamos si la pila esta vacia con el metodo vacia
@@ -114,7 +114,7 @@ public class Pila
             System.out.println("La pila esta vacía");
         }
     }
-    
+
     //Método Buscar tipo void con un parametro tipo entero.
     public void Buscar(int referencia){
         //Nuevamente le pasamos los valores al objeto temp.
@@ -135,21 +135,21 @@ public class Pila
         //se esta comparando el número, muy simple si estuviera hay todas las veces del recorrido
         //lo que contenga el else se imprimiria ya que la condición no se cumpliria a la primera.
         if (buscar(referencia)) {
-           while (temp != null) {
-              if (referencia == temp.getValor()) {
-                 System.out.println("El numero: " + temp.getValor() + " esta en la posición " + contador);
-              }
+            while (temp != null) {
+                if (referencia == temp.getValor()) {
+                    System.out.println("El numero: " + temp.getValor() + " esta en la posición " + contador);
+                }
 
-              temp = temp.getProx();
-              contador++;
-           }
-              System.out.println("\n");
+                temp = temp.getProx();
+                contador++;
+            }
+            System.out.println("\n");
         }else{
-           System.out.println("El número no esta en la pila");
-           System.out.println("\n");
+            System.out.println("El número no esta en la pila");
+            System.out.println("\n");
         }
     }
-    
+
     //Método que no ayudara a verificar si el elemento se encuentra devolviendonos un true
     public boolean buscar(int numero){
         // Crea una copia de la lista.
@@ -170,4 +170,25 @@ public class Pila
         // Retorna el resultado.
         return encontrado;
     }
-}
+    //Cual es el valor minimo
+    public void minimo(){
+        Nodo temp = top;
+        int min=10000000;// se declara una variable con un valor maximo
+        if(temp!= null){//si el objeto temp es igual o diferente a null, si esto se cumple entra en la condicion while
+
+            while(temp!=null){//si temp es diferente a null, si esto se cumple entra a la condicion If
+
+                if(temp.getValor() < min){//compara los valores del temp con la variable min  
+                    min = temp.getValor();// se le asigna el nuevo valor a la variable min 
+                }
+                temp = temp.getProx();//el valor siguiente lo volvemos nuestro nuevo temp 
+            }
+            System.out.println("El valor minimo es: " + min);//se imprime el valor minimo
+            System.out.println("\n");//se imprime un salto de linea 
+        }else{
+            System.out.println("Pila vacia.");//se imprime un mensaje en caso de que no se cumpliera la condicion 
+            System.out.println("\n");//se imprime un salto de linea 
+        }
+    }
+} 
+
