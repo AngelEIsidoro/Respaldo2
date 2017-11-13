@@ -72,11 +72,11 @@ public class Main {
                   break;
               case 5:
               //Método que nos servira para saber de cuantos elementos esta conformada nuestra pila.
-                  //p.tamaño();
+                  p.tamaño();
                   break;
               case 6:
               //Método que nos servira para saber cual es el elemento maximo o mayor de la pila.
-                  //p.maximo();
+                  p.maximo();
                   break;
               case 7:
               //Método que nos servira para saber cual es el elemento minimo o menor de la pila.

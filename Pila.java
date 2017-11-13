@@ -170,4 +170,24 @@ public class Pila
         // Retorna el resultado.
         return encontrado;
     }
+     //Cual es el valor maximo
+    public void maximo(){
+        Nodo temp = top; //el objeto top le pasa todo lo que contiene al nuevo objeto creado temp
+        int max=-1;// se declara una variable con un valor minimo 
+        if(temp!= null){//si el objeto temp es igual o diferente a null , si esto se cumple entra en la condicion
+                         //while 
+            while(temp!=null){//si temp es igual o diferente de null, si esto se cumple se compara los valores del temp
+                              //con max 
+                if(temp.getValor() > max){ //si el valor que contiene el  objeto temp es mayor que la variable max entonces 
+                    max = temp.getValor(); //se le asigna el nuevo valor a la variable max
+                }
+                temp = temp.getProx(); //el valor siguiente lo volvemos nuestro nuevo temp
+            }
+            System.out.println("El valor maximo es: " + max); //se imprime el valor máximo
+            System.out.println("\n");// se imprime un salto de linea
+         }else{
+            System.out.println("Pila vacia.");// en caso de que no se cumpliera la condicion If se manda a imprimir un mensaje
+            System.out.println("\n");// se imprime un salto de linea
+        }
+    }
 }
